@@ -1,0 +1,376 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Home</title>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<!-- Custom Theme files -->
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+	<!-- Custom Theme files -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!--Google Fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+	<!--google fonts-->
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!--header-top start here-->
+<div class="top-header">
+	<div class="container">
+		<div class="top-header-main">
+			<div class="col-md-8 logo">
+				<h1><a  href="index">Innermost</a></h1>
+			</div>
+			<div class="col-md-4 top-social">
+				<ul>
+					<li><a href="#"><span class="fb"> </span></a></li>
+					<li><a href="#"><span class="tw"> </span></a></li>
+					<li><a href="#"><span class="in"> </span></a></li>
+					<li><a href="#"><span class="gmail"> </span></a></li>
+				</ul>
+			</div>
+
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--header-top end here-->
+<!--header start here-->
+<!-- NAVBAR
+    ================================================== -->
+<div class="header w3l">
+	<div class="fixed-header">
+		<div class="navbar-wrapper">
+			<div class="container">
+				<nav class="navbar navbar-inverse navbar-static-top">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse">
+						<nav class="cl-effect-3" id="cl-effect-3">
+							<ul class="nav navbar-nav">
+								<li><a class="active" href="index">Home</a></li>
+								<li><a href="about">About</a></li>
+								<li><a href="shortcodes">Short Codes</a></li>
+								<li><a href="gallery">Gallery</a></li>
+								<li><a href="contact">Contact</a></li>
+							</ul>
+						</nav>
+
+					</div>
+					<div class="head-search">
+						<form action="#" method="post">
+							<input type="text" placeholder="Search..." name="Search..." required="">
+							<input type="submit" value="">
+						</form>
+					</div>
+					<div class="clearfix"> </div>
+				</nav>
+
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--header end here-->
+<script src="js/responsiveslides.min.js"></script>
+<script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+        // Slideshow 3
+        $("#slider3").responsiveSlides({
+            auto: false,
+            pager:true,
+            nav:true,
+            speed: 500,
+            namespace: "callbacks",
+            before: function () {
+                $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+                $('.events').append("<li>after event fired.</li>");
+            }
+        });
+    });
+</script>
+<!--//End-slider-script -->
+<!--banner  start hwew-->
+<div class="banner">
+	<div class="container">
+		<div class="banner-main">
+			<div  id="top" class="callbacks_container">
+				<ul class="rslides" id="slider3">
+					<li>
+						<h3>Lorem ipsum dolor sit amet consectetur adipisc.</h3>
+
+					</li>
+					<li>
+						<h3>Ipsum Lorem  dolor sit amet consectetur adipisc.</h3>
+
+					</li>
+					<li>
+						<h3>Lorem ipsum dolor sit amet consectetur adipisc.</h3>
+
+					</li>
+					<li>
+						<h3>Dolor Lorem ipsum  sit amet consectetur adipisc.</h3>
+
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--BANNER END HERE-->
+<!--creative start here-->
+<div class="creative">
+	<div class="container">
+		<div class="creative-main">
+            <%pics.forEach(function (pic) {%>
+			<div class=<%=pic.class%>>
+				<img src=<%=pic.img%> alt="" class="img-responsive">
+			</div>
+            <%})%>
+
+			<!--<div class="above-creative">-->
+			<!--<img src="images/pic2.jpg" alt="" class="img-responsive">-->
+			<!--</div>-->
+			<div class="col-md-6 creative-right">
+				<h4><%=title%></h4>
+				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--creative end here-->
+<!--welcome start here-->
+<div class="welcome agileits">
+	<div class="container">
+		<div class="welcome-main">
+			<div class="welcome-top">
+				<h4><%=welcometitle%></h4>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto </p>
+			</div>
+			<div class="welcome-bottom">
+				<%icns.forEach(function (icn) {%>
+				<div class="col-md-4 welcome-grid">
+							<img src=<%=icn.img%> alt="" class="img-responsive">
+							<h4><%=icn.txt%></h4>
+					<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+					</div>
+				<%})%>
+
+				<!--<div class="col-md-4 welcome-grid">-->
+					<!--<img src="images/icn2.png" alt="" class="img-responsive">-->
+					<!--<h4>Feature Two</h4>-->
+					<!--<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>-->
+				<!--</div>-->
+				<!--<div class="col-md-4 welcome-grid">-->
+					<!--<img src="images/icn3.png" alt="" class="img-responsive">-->
+					<!--<h4>Feature Three</h4>-->
+					<!--<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>-->
+				<!--</div>-->
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--welcoome end here-->
+<!--work start here-->
+<div class="work">
+	<div class="container">
+		<div class="work-main">
+			<h3>Are You Impressed By Our Work?</h3>
+			<p>Nor again is there anyone who loves or pursues or desires to obtain pain.</p>
+			<div class="work-btns">
+				<a href="contact">Get In Touch</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--work end here-->
+<div class="tlinks">Collect from <a href="http://www.cssmoban.com/" >手机网站模板</a></div>
+<!--look back to our history-->
+<div class="history">
+	<div class="container">
+		<div class="history-main">
+			<div class="history-top">
+				<h3><%=historytitle%></h3>
+				<p>Excepteur sint occaecat cupidatat non proident.</p>
+			</div>
+			<div class="history-bottom">
+				<span class="devide-line"> </span>
+				<div class="history-block">
+					<div class="changer-left  histo-agile">
+						<div class="hist-date-strip">
+							<div class="hist-date">
+								<h4>18 SEP</h4>
+							</div>
+							<div class="hist-text">
+								<a href="single"><h5>sint occaecat cupidatat non</h5></a>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="history-info">
+							<div class="history-info-left">
+								<a href="single"><img src=<%=s1%> alt="" class="img-responsive"></a>
+							</div>
+							<div class="history-info-right">
+								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="gd-tl-tip"> </div>
+					</div>
+					<div class="clearfix"> </div>
+					<div class="ch-bott1">
+						<span class="botted"> </span>
+					</div>
+				</div>
+				<div class="history-block-snd">
+					<div class="changer-right-snd">
+						<div class="changer-right-snd-strip">
+							<div class="changer-right-snd-text">
+								<a href="single"><h5>sint occaecat cupidatat non</h5></a>
+							</div>
+							<div class="changer-right-snd-date">
+								<h4>30 JUL</h4>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="hist-gallery">
+							<%singleimgs.forEach(function (singleimg) {%>
+							<div class="hist-gall-grid">
+								<a href="single"><img src=<%=singleimg.img%> alt="" class="img-responsive"></a>
+							</div>
+							<%})%>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="gd-tl-tip2"> </div>
+					</div>
+					<div class="clearfix"> </div>
+					<div class="ch-bott1 bott-w3">
+						<span class="botted"> </span>
+					</div>
+				</div>
+				<div class="history-block">
+					<div class="changer-left">
+						<div class="hist-date-strip">
+							<div class="hist-date">
+								<h4>10 JAN</h4>
+							</div>
+							<div class="hist-text">
+								<a href="single"><h5>sint occaecat cupidatat non</h5></a>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="history-info">
+							<div class="history-info-left">
+								<a href="single"><img src=<%=s5%> alt="" class="img-responsive"></a>
+							</div>
+							<div class="history-info-right">
+								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="gd-tl-tip3"> </div>
+					</div>
+					<div class="clearfix"> </div>
+					<div class="ch-bott1">
+						<span class="botted"> </span>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--look back to our history-->
+<!--news letter stat here-->
+<div class="newsletter">
+	<div class="container">
+		<div class="newsletter-main">
+			<h5>Subscribe For Our Newsletter</h5>
+			<div class="newsletter-w3">
+				<form action="#" method="post">
+					<input type="text" placeholder="Enter Your Email Here" name="Enter Your Email Here" required="">
+					<input type="submit" value="Send">
+				</form>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--newletter end here-->
+<!--footer start here-->
+<div class="footer">
+	<div class="container">
+		<div class="footer-wthree">
+			<div class="col-md-4 footer-grid">
+				<h4>Information :</h4>
+				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem</p>
+			</div>
+			<div class="col-md-4 footer-grid">
+				<h4>Contact Info :</h4>
+				<div class="ftr-icons">
+					<div class="ftr-iblock">
+						<span class="glyphicon glyphicon-map-marker">  </span>
+					</div>
+					<div class="ftr-text">
+						<p>Ut enim ad minim veniam, quis nostrud  ullamco.</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="ftr-icons">
+					<div class="ftr-iblock">
+						<span class="glyphicon glyphicon-earphone">  </span>
+					</div>
+					<div class="ftr-text">
+						<p>+12 586 146 5827</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="ftr-icons">
+					<div class="ftr-iblock">
+						<span class="glyphicon glyphicon-envelope">  </span>
+					</div>
+					<div class="ftr-text">
+						<p><a href="mailto:info@example.com">lorem@example.com</a></p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="col-md-4 footer-grid">
+				<h4>We're Social :</h4>
+				<h5>Follow</h5>
+				<ul class="ftr-social-icons">
+					<li><a class="fa" href="#"></a> </li>
+					<li><a class="tw" href="#"></a> </li>
+					<li><a class="ind" href="#"></a> </li>
+					<li><a class="g" href="#"></a> </li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="copy">
+			<p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+		</div>
+	</div>
+</div>
+<!--footer end here-->
+</body>
+</html>
+
+
+		

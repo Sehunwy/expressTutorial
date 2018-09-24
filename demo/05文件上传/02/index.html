@@ -1,0 +1,39 @@
+<html>
+
+	<head>
+		<title>express 框架 文件上传</title>
+
+		<!--引入CSS-->
+		<link rel="stylesheet" type="text/css" href="js/webuploader/webuploader.css">
+		<!--引入JS-->
+		<script type="text/javascript" src="js/webuploader/webuploader.js"></script>
+
+		<script>
+			var BASE_URL = "http://localhost:8088";
+			var uploader = WebUploader.create({
+				// swf文件路径
+				swf: BASE_URL + 'js/webuploader/Uploader.swf',
+				// 文件接收服务端。
+				server: 'http://webuploader.duapp.com/server/fileupload.php',
+				// 选择文件的按钮。可选。
+				// 内部根据当前运行是创建，可能是input元素，也可能是flash.
+				pick: '#picker',
+				// 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
+				resize: false
+			});
+		</script>
+
+	</head>
+
+	<body>
+		<h3>文件上传：</h3>
+		<!--dom结构部分-->
+		<div id="uploader-demo">
+			<!--用来存放item-->
+			<div id="fileList" class="uploader-list"></div>
+			<div id="filePicker">选择图片</div>
+		</div>
+
+	</body>
+
+</html>

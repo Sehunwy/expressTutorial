@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title><%=title%></title>
+</head>
+
+<body>
+<h1>今天有<%=infor.length%></h1>
+<h1><%=infor.money%></h1>
+<ul>
+    <% infor.users.forEach(function (user) {%>
+    <li><%=user.name%><%=user.age%></li>
+    <% })%>
+
+</ul>
+</body>
+</html>
